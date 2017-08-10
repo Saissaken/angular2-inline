@@ -25,7 +25,7 @@ module.exports = (function () {
         return new Promise(function (resolve, reject) {
             
             // find containing template string if one exists
-            const templateRegExp = /(template\s*:\s*`)([^`]*)`/g;
+            const templateRegExp = /(`<)([^`]*)>`/g;
             const text = document.getText();
             const pos = document.offsetAt(position);
             let match = null;
